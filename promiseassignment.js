@@ -12,3 +12,7 @@ const mypromise2 = new Promise((resolve,reject)=>{
     },3000)
 })
 
+Promise.all([mypromise1,mypromise2])
+.then( 
+    console.log("first")
+)
