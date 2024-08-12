@@ -10,7 +10,14 @@
 
 const fs = require("fs") 
 
-const print=(err,data)=>console.log(data)
+const print=(err,data)=>{
+    if(err){
+        console.log("File Not Found",err)
+    }
+    else{
+        console.log(data)
+    }
+}
 
 const contents1 = fs.readFile("a.txt","utf-8",print) // it works asynchronous
 //console.log(contents1) 
@@ -18,6 +25,10 @@ const contents1 = fs.readFile("a.txt","utf-8",print) // it works asynchronous
 const contents2 = fs.readFile("b.txt","utf-8",print) // it works asynchronous
 
 setTimeout(() => {
-    console.log("hello")
+    console.log("Hello") 
 }, 0); 
+
+setTimeout(() => {
+    console.log("Done")
+}, 2000); 
 //console.log(contents2) 
