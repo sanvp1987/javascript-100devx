@@ -1,3 +1,5 @@
+// ************* Basic Callbacks *************
+
 // const sum =(a,b)=>a+b
 // const substract =(a,b)=>a-b
 // const doOperation =(a,b,func)=>func(a,b)
@@ -7,6 +9,10 @@
 
 // const opValsub = doOperation(10,3,substract)
 // console.log(opValsub)
+
+// ************* Basic Callbacks *************
+
+// ***************************** Actual Use Case Callbacks *****************************
 
 const fs = require("fs") 
 
@@ -32,3 +38,5 @@ setTimeout(() => {
     console.log("Done")
 }, 2000); 
 //console.log(contents2) 
+
+// ***************************** Actual Use Case Callbacks *****************************

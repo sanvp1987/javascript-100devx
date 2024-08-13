@@ -42,19 +42,29 @@
 // ****************** Promise with Fetch *********************
 
 // ****************** Promise with Fs.ReadFile *********************
-const fs = require("fs").promises
+// const fs = require("fs").promises
 
-const readFile = async (path) =>{
-    const contents = fs.readFile(path,"utf-8")
-    return contents;
-}
+// const readFile = async (path) =>{
+//     const contents = fs.readFile(path,"utf-8")
+//     return contents;
+// }
 
-const run = async ()=>{
-    console.log("Reading File...")
-    const contents = await readFile("a.txt")
-    console.log(`File Contents : ${contents}`)
-    console.log("File Read Done")
-}
+// const run = async ()=>{
+//     console.log("Reading File...")
+//     const contents = await readFile("a.txt")
+//     console.log(`File Contents : ${contents}`)
+//     console.log("File Read Done")
+// }
 
-run()
+// run()
 // ****************** Promise with Fs.ReadFile *********************
+
+const setTimeoutPromisified = (ms) =>{
+    return new Promise((resolve,reject)=>{ setTimeout(()=>{
+        resolve(ms)
+    }, ms); })
+}
+
+const callback = (ms) =>console.log(`${ms}ms Passed`)
+
+setTimeoutPromisified(3000).then(callback);  
