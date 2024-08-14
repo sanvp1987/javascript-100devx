@@ -59,12 +59,12 @@
 // run()
 // ****************** Promise with Fs.ReadFile *********************
 
-const setTimeoutPromisified = (ms) =>{
-    return new Promise((resolve,reject)=>{ setTimeout(()=>{
-        resolve(ms)
-    }, ms); })
-}
+// const setTimeoutPromisified = (ms) =>{
+//     return new Promise((resolve,reject)=>{ setTimeout(()=>{
+//         resolve(ms)
+//     }, ms); })
+// }
 
-const callback = (ms) =>console.log(`${ms}ms Passed`)
+// const callback = (ms) =>console.log(`${ms}ms Passed`)
 
-setTimeoutPromisified(3000).then(callback);  
+// setTimeoutPromisified(3000).then(callback);  
